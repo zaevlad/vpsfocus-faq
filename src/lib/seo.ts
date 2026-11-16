@@ -1,8 +1,9 @@
 const configuredSiteUrl = import.meta.env["VITE_SITE_URL"] as string | undefined;
 
-export const SITE_URL = (
-  configuredSiteUrl ?? "https://zaevlad.github.io/vpsfocus-faq"
-).replace(/\/+$/, "");
+export const SITE_URL = (configuredSiteUrl ?? "https://zaevlad.github.io/vpsfocus-faq").replace(
+  /\/+$/,
+  "",
+);
 
 export const SITE_BASE = import.meta.env["BASE_URL"];
 

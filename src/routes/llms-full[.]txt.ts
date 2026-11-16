@@ -5,7 +5,9 @@ export const Route = createFileRoute("/llms-full.txt")({
   server: {
     handlers: {
       GET: () =>
-        new Response(faqAsMarkdown(), { headers: { "Content-Type": "text/markdown; charset=utf-8" } }),
+        new Response(faqAsMarkdown(), {
+          headers: { "Content-Type": "text/markdown; charset=utf-8" },
+        }),
     },
   },
 });

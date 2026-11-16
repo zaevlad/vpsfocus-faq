@@ -136,8 +136,17 @@ function Question() {
           <ArrowUpLeft className="size-4" />
           All questions
         </Link>
-        <a href="https://vpsfocus.xyz" className="flex items-center gap-2 font-display text-lg font-semibold">
-          <img src={`${SITE_BASE}favicon-96.png`} alt="" width={24} height={24} className="size-6 rounded-md" />
+        <a
+          href="https://vpsfocus.xyz"
+          className="flex items-center gap-2 font-display text-lg font-semibold"
+        >
+          <img
+            src={`${SITE_BASE}favicon-96.png`}
+            alt=""
+            width={24}
+            height={24}
+            className="size-6 rounded-md"
+          />
           vpsFocus / FAQ
         </a>
       </header>

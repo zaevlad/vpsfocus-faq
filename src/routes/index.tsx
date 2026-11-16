@@ -103,7 +103,13 @@ function Index() {
           href="https://vpsfocus.xyz"
           className="flex items-center gap-2 font-display text-xl font-semibold"
         >
-          <img src={`${SITE_BASE}favicon-96.png`} alt="" width={28} height={28} className="size-7 rounded-md" />
+          <img
+            src={`${SITE_BASE}favicon-96.png`}
+            alt=""
+            width={28}
+            height={28}
+            className="size-7 rounded-md"
+          />
           vpsFocus
           <span className="ml-2 hidden font-mono text-xs font-normal text-muted-foreground sm:inline">
             / knowledge
