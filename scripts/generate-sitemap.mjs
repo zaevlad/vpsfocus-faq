@@ -13,7 +13,7 @@ const updated =
 
 const urls = [
   { loc: `${SITE}/`, priority: "1.0", changefreq: "weekly" },
-  ...slugs.map((slug) => ({ loc: `${SITE}/q/${slug}`, priority: "0.8", changefreq: "monthly" })),
+  ...slugs.map((slug) => ({ loc: `${SITE}/q/${slug}/`, priority: "0.8", changefreq: "monthly" })),
 ];
 
 const escape = (value) => value.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");

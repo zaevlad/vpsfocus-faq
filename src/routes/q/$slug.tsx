@@ -43,7 +43,7 @@ export const Route = createFileRoute("/q/$slug")({
           { property: "og:title", content: loaderData.q },
           { property: "og:description", content: metaDescription(loaderData.a) },
           { property: "og:type", content: "article" },
-          { property: "og:url", content: absoluteUrl(`/q/${loaderData.slug}`) },
+          { property: "og:url", content: absoluteUrl(`/q/${loaderData.slug}/`) },
           { property: "og:image", content: OG_IMAGE },
           { property: "og:image:type", content: "image/png" },
           { property: "og:image:width", content: "1200" },
@@ -61,8 +61,8 @@ export const Route = createFileRoute("/q/$slug")({
       : [{ title: "Unavailable — vpsFocus FAQ" }, { name: "robots", content: "noindex" }],
     links: loaderData
       ? [
-          { rel: "canonical", href: absoluteUrl(`/q/${loaderData.slug}`) },
-          ...languageLinks(`/q/${loaderData.slug}`),
+          { rel: "canonical", href: absoluteUrl(`/q/${loaderData.slug}/`) },
+          ...languageLinks(`/q/${loaderData.slug}/`),
         ]
       : [],
     scripts: loaderData
@@ -74,8 +74,8 @@ export const Route = createFileRoute("/q/$slug")({
               "@graph": [
                 {
                   "@type": "FAQPage",
-                  "@id": absoluteUrl(`/q/${loaderData.slug}#page`),
-                  url: absoluteUrl(`/q/${loaderData.slug}`),
+                  "@id": absoluteUrl(`/q/${loaderData.slug}/#page`),
+                  url: absoluteUrl(`/q/${loaderData.slug}/`),
                   name: loaderData.q,
                   inLanguage: "en",
                   dateModified: FAQ_UPDATED,
@@ -87,7 +87,7 @@ export const Route = createFileRoute("/q/$slug")({
                     width: 1200,
                     height: 630,
                   },
-                  breadcrumb: { "@id": absoluteUrl(`/q/${loaderData.slug}#breadcrumb`) },
+                  breadcrumb: { "@id": absoluteUrl(`/q/${loaderData.slug}/#breadcrumb`) },
                   mainEntity: {
                     "@type": "Question",
                     name: loaderData.q,
@@ -96,7 +96,7 @@ export const Route = createFileRoute("/q/$slug")({
                 },
                 {
                   "@type": "BreadcrumbList",
-                  "@id": absoluteUrl(`/q/${loaderData.slug}#breadcrumb`),
+                  "@id": absoluteUrl(`/q/${loaderData.slug}/#breadcrumb`),
                   itemListElement: [
                     { "@type": "ListItem", position: 1, name: SITE_NAME, item: absoluteUrl("/") },
                     {
@@ -109,7 +109,7 @@ export const Route = createFileRoute("/q/$slug")({
                       "@type": "ListItem",
                       position: 3,
                       name: loaderData.q,
-                      item: absoluteUrl(`/q/${loaderData.slug}`),
+                      item: absoluteUrl(`/q/${loaderData.slug}/`),
                     },
                   ],
                 },

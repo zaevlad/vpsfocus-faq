@@ -26,7 +26,7 @@ for (const t of tokens) {
   if (t.length === 2) {
     lines.push("", `## ${JSON.parse(t[1])}`, "");
   } else {
-    lines.push(`- [${JSON.parse(t[2])}](q/${JSON.parse(t[1])})`);
+    lines.push(`- [${JSON.parse(t[2])}](q/${JSON.parse(t[1])}/)`);
     count++;
   }
 }
