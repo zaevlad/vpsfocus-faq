@@ -84,6 +84,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "author", content: "vpsFocus" },
       { name: "format-detection", content: "telephone=no" },
       { name: "robots", content: "index, follow, max-image-preview:large" },
+      { name: "google-site-verification", content: "TlUHZ3UhRqNrq2gCnk4KKhnmKDZ8C5vGfk-L-qlhRVg" },
       { title: "vpsFocus FAQ" },
       { name: "description", content: "Answers about vpsFocus for people and AI agents." },
       { property: "og:title", content: "vpsFocus FAQ" },
